@@ -17,7 +17,7 @@ gross_prem = round(total_prem/1e6,2)
 ID_count = (data['Insured ID'].count())
 avg_lim = round((data['Breach 1st party\nCoverage Limit\nat 100%\n($)'].mean())/1e6,2)
 avg_att = round((data['Breach 1st party\nCoverage\nAttachment / Deductible\n($)'].mean())/1e6,2)
-avg_rev = round((data['Annual Revenue\n($M)'].mean())/1e6,2)
+avg_rev = round((data['Annual Revenue\n($M)'].mean()),2)
 avg_security = round((data['Cybersecurity Level (1 = Above Average, 2 = Average, 3 = Below Average)'].mean()),2)
 
 exp_table = {'GWP ($M)': [gross_prem], 'Count': [ID_count], 'Average Limit ($M)': [avg_lim], 'Average Attachment ($M)': [avg_att], 'Average Revenue ($M)':[avg_rev], 'Average Cyber Security Level':[avg_security]}
